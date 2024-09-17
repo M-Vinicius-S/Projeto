@@ -1,32 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de Moedas</title>
-    <a href="css/style.css"></a>
-
-   
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
-    <h1>Conversor de Moedas</h1>
-    <label for="valor">Valor:</label>
-    <input type="number" id="valor" step="0.01" placeholder="Digite o valor" /><br>
-    
-    <label for="moedaDe">De:</label>
-    <input type="number" id="valor" step="0.01" placeholder="">
-
-    <label for="moedaPara">Para:</label>
-   <input type="number" id="valor" step="0.01" placeholder=" ">
-
-    <button onclick="converter()">Converter</button>
-
-    <p id="resultado"></p>
+    <div class="banner" ></div>
+    <div class="container">
+        <header>Conversor de Moedas</header>
+        <form action="#" id="currency-converter">
+            <div class="valor">
+                <label for="value">Insira o Valor</label>
+                <input type="number" id="value" value="1" step="any">
+            </div>
+            <div class="lista">
+                <div class="moedaDe">
+                    <label for="currency-from">De</label>
+                    <div class="selecao">
+                        <img src="https://flagsapi.com/US/flat/64.png" alt="Bandeira dos EUA">
+                        <select id="currency-from">
+                            <option value="USD">USD</option>
+                            <option value="BRL">BRL</option>
+                            <option value="EUR">EUR</option>
+                            <option value="JPY">JPY</option>
+                            <option value="ARS">ARS</option>
+                        </select>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined">sync_alt</span>
+                <div class="moedaPara">
+                    <label for="currency-to">Para</label>
+                    <div class="selecao">
+                        <img src="https://flagsapi.com/BR/flat/64.png" alt="Bandeira do Brasil">
+                        <select id="currency-to">
+                            <option value="USD">USD</option>
+                            <option value="BRL">BRL</option>
+                            <option value="EUR">EUR</option>
+                            <option value="JPY">JPY</option>
+                            <option value="ARS">ARS</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="converter" id="conversion-rate">1 USD = 5,48 BRL</div>
+            <button type="submit">Converter</button>
+        </form>
+    </div>
+    <script>
+        // JavaScript para a funcionalidade de conversão pode ser adicionado aqui
+        document.getElementById('currency-converter').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Lógica para converter as moedas e atualizar a taxa de conversão
+        });
+    </script>
 </body>
-<script>
-  
-</script>
 
 </html>
