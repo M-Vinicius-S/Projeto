@@ -14,7 +14,7 @@
     <div class="banner" ></div>
     <div class="container">
         <header>Conversor de Moedas</header>
-        <form action="#" id="currency-converter">
+        <form action="#" id="moeda-converter">
             <div class="valor">
                 <label for="value">Insira o Valor</label>
                 <input type="number" id="value" value="1" step="any">
@@ -24,13 +24,7 @@
                     <label for="currency-from">De</label>
                     <div class="selecao">
                         <img src="https://flagsapi.com/US/flat/64.png" alt="Bandeira dos EUA">
-                        <select id="currency-from">
-                            <option value="USD">USD</option>
-                            <option value="BRL">BRL</option>
-                            <option value="EUR">EUR</option>
-                            <option value="JPY">JPY</option>
-                            <option value="ARS">ARS</option>
-                        </select>
+                        <select></select>
                     </div>
                 </div>
                 <span class="material-symbols-outlined">sync_alt</span>
@@ -38,27 +32,16 @@
                     <label for="currency-to">Para</label>
                     <div class="selecao">
                         <img src="https://flagsapi.com/BR/flat/64.png" alt="Bandeira do Brasil">
-                        <select id="currency-to">
-                            <option value="USD">USD</option>
-                            <option value="BRL">BRL</option>
-                            <option value="EUR">EUR</option>
-                            <option value="JPY">JPY</option>
-                            <option value="ARS">ARS</option>
-                        </select>
+                        <select></select>
                     </div>
                 </div>
             </div>
-            <div class="converter" id="conversion-rate">1 USD = 5,48 BRL</div>
-            <button type="submit">Converter</button>
+            <div class="converter">1 USD = 5,48 BRL</div>
+            <button>Converter</button>
         </form>
     </div>
-    <script>
-        // JavaScript para a funcionalidade de conversão pode ser adicionado aqui
-        document.getElementById('currency-converter').addEventListener('submit', function (e) {
-            e.preventDefault();
-            // Lógica para converter as moedas e atualizar a taxa de conversão
-        });
-    </script>
+    <script src="js/country-lista.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
